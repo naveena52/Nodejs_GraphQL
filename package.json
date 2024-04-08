@@ -2,11 +2,11 @@
   "name": "nodejs_graphiql",
   "version": "1.0.0",
   "description": "This is Simple node app Integrated with GraphiQL ",
-  "main": "index.js",
-  "type": "module",
+  "main": "server.js",
+
   "scripts": {
     "start": "node server.js",
-    "build": "node build",
+    "build-js": "server-js-build-command",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
 
