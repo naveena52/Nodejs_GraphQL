@@ -1,7 +1,7 @@
 import express from 'express';
-const { graphqlHTTP } = require('express-graphql');
-const schema = require('./schema');
-const resolvers = require('./resolvers');
+import { graphqlHTTP } from 'express-graphql';
+import schema from './schema.js'; // Note the .js extension
+import resolvers from './resolvers.js'; // Note the .js extension
 
 const app = express();
 const PORT = process.env.PORT || 3000;
