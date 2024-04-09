@@ -13,4 +13,4 @@ const schema = buildSchema(`
   }
 `);
 
-module.exports = schema;
+module.exports = {schema};
