@@ -1,7 +1,8 @@
 let message = 'Hello, World!';
 let email = 'example@example.com';
+let hello='hello welcome';
 const resolvers = {
-  hello: () => 'Hello! Welcome To GraphQL',
+  hello: () => hello,
   message: () => message,
   email: () => email,
   setMessage: ({ message: newMessage }) => {

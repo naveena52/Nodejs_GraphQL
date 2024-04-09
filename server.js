@@ -7,7 +7,6 @@ const app = express();
 const { default: expressPlayground } = require('graphql-playground-middleware-express');
 const PORT = process.env.PORT || 3000;
 app.use(bodyParser.json());
-
 app.use("/graphql", graphqlHTTP((req) => ({
   schema: schema,
   rootValue: resolvers,
