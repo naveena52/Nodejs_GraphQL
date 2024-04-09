@@ -3,20 +3,18 @@
   "version": "1.0.0",
   "description": "This is Simple node app Integrated with GraphiQL ",
   "main": "server.js",
-  "type": "module",
-
   "scripts": {
     "start": "node server.js",
     "build": "node build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
   "author": "Naveena",
   "license": "ISC",
   "dependencies": {
     "@vercel/node": "^3.0.25",
     "express": "^4.19.2",
     "express-graphql": "^0.12.0",
-    "graphql": "^15.8.0"
+    "graphql": "^15.8.0",
+    "graphql-playground-middleware-express": "^1.7.23"
   }
 }

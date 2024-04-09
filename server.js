@@ -3,18 +3,17 @@ const { graphqlHTTP } = require('express-graphql');
 const schema = require('./schema');
 const resolvers = require('./resolvers');
 const app = express();
+const { default: expressPlayground } = require('graphql-playground-middleware-express');
 const PORT = process.env.PORT || 3000;
 
-app.use('/graphql', graphqlHTTP({
+app.use("/graphql", graphqlHTTP((req) => ({
   schema: schema,
   rootValue: resolvers,
   graphiql: true,
-}));
+})));
 
-app.get('/', (_, res) => {
-  res.redirect('/graphql');
-});
 
+app.get("/", expressPlayground({ endpoint: "/graphql" }));
 app.listen(PORT, () => {
   console.log(`Server is running at http://localhost:${PORT}/`);
 });
