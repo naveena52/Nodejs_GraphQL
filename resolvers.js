@@ -1,7 +1,8 @@
 let message = 'Hello, World!';
 let email = 'example@example.com';
 let hello='hello welcome';
-const resolvers = {
+
+module.exports = {
   hello: () => hello,
   message: () => message,
   email: () => email,
@@ -15,6 +16,4 @@ const resolvers = {
     return email;
   }
   
-};
-
-module.exports = {resolvers};
+}
