@@ -1,11 +1,14 @@
 const { buildSchema } = require('graphql');
 
 const schema = buildSchema(`
-  type Query {
-    hello: String
-    message: String
-    email : String
-  }
+type Data {
+  message: String!
+  email:String!
+}
+type Query {
+  getAllData: [Data!]!
+}  
+
 
   type Mutation {
     setMessage(message: String!): String
