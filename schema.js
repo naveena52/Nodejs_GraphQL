@@ -10,10 +10,7 @@ type Query {
 }  
 
 
-  type Mutation {
-    setMessage(message: String!): String
-    setEmail(email: String!): String
-  }
+  
 `);
 
 module.exports = {schema};
